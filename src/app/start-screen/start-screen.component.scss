@@ -1,0 +1,101 @@
+.start__screen {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/img/wood 2.jpg");
+}
+
+.start__card {
+    position: relative;
+}
+
+%card__header {
+    display: flex;
+    align-items: baseline;
+    position: absolute;
+    text-shadow: 3px 2px 0 rgb(0 0 0 / 50%);
+    writing-mode: vertical-rl;
+    -moz-text-orientation: upright;
+    text-orientation: upright;
+    text-align: center;
+}
+
+.header__normal {
+    @extend %card__header;
+    left: 0.1em;
+    top: 4.5em;
+}
+
+.header__reverse {
+    @extend %card__header;
+    right: 0.1em;
+    bottom: 4.5em;
+    transform: scale(-1, -1);
+}
+
+h1 {
+    font-size: 2.7em;
+    color: #F38F00;
+}
+
+h3 {
+    font-size: 2em;
+    color: #FBFD93;
+    margin-top: 1em;
+}
+
+%king-shared {
+    width: 24em;
+    height: 18em;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.top-king {
+    @extend %king-shared;
+    background-image: url("/assets/img/king.jpg");
+}
+
+.bottom-king {
+    @extend %king-shared;
+    background-image: url("/assets/img/king2.jpg");
+}
+
+.button__wrapper {
+    position: absolute;
+    left: 68px;
+    bottom: 70px;
+    background-color: #FBFD93;
+    padding: 3.5em 0.3em;
+}
+
+img {
+    width: 34vh;
+    height: auto;
+    cursor: pointer;
+    mix-blend-mode: multiply;
+
+    &:hover {
+        filter: brightness(1.5);
+    }
+}
+
+h2 {
+    position: absolute;
+    bottom: 274px;
+    left: 118px;
+    right: 118px;
+    font-size: 1.6em;
+    color: hsl(0deg 0% 0%);
+    z-index: 10;
+    cursor: pointer;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
