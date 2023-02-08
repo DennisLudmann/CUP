@@ -1,4 +1,4 @@
-<app-player *ngFor="player of game.players; let i = index;" [name]="player"
+<app-player *ngFor="let player of game.players; let i = index;" [name]="player"
 [ngStyle]="{'top.px': 150 + i * 150}" class="player-position"></app-player>
 
 <div class="field">
